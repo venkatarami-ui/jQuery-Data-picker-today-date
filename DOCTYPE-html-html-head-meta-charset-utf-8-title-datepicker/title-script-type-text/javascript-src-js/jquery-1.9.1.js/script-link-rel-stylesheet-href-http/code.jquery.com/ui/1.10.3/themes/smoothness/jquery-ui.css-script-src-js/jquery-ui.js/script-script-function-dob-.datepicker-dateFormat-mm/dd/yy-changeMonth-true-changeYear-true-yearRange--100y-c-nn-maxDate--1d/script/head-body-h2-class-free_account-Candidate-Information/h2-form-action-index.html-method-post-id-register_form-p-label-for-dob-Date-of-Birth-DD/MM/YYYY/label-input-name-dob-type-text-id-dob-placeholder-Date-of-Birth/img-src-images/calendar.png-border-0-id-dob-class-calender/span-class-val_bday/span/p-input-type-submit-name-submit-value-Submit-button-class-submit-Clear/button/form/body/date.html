@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>::datepicker::</title>
+
+<script type="text/javascript" src="js/jquery-1.9.1.js"> </script>
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css">
+
+<script src="js/jquery-ui.js"></script>
+
+<script>
+$(function() {
+        $( "#dob" ).datepicker({
+            dateFormat : 'mm/dd/yy',
+            changeMonth : true,
+            changeYear : true,
+            yearRange: '-100y:c+nn',
+            maxDate: '-1d',
+		
+        });	
+		
+    });
+
+  </script>
+  
+</head>
+
+<body>
+<h2 class="free_account">Candidate Information</h2> 
+
+<form action="index.html" method="post" id="register_form">
+	
+		<p> <label for="dob">Date of Birth* (DD/MM/YYYY)</label> <input name="dob"  type="text" id="dob" placeholder="Date of Birth" /> <img src="images/calendar.png" border="0" id="dob" class="calender" />  <span class="val_bday"></span> </p>
+		
+	
+	<input type="submit" name="submit" value="Submit"> 
+	
+	<button class="submit"> Clear </button> 
+</form>
+</body>
+</html>
